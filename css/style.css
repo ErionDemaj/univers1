@@ -1,0 +1,379 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    
+    
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 22px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+
+.hamburger {
+    display: none ;
+    cursor: pointer;
+}
+
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+.text {
+    width: 70%;
+    text-align: center;
+    margin-left: 14%;
+    font-size: 18px;
+    font-weight: bold;
+} 
+
+.gallery {
+    display: grid;
+    grid-template-columns: 2fr 2fr ;
+    justify-content: center;
+}
+
+.gallery img{
+    width: 70%;
+}
+
+.gallery p{
+    width: 80%;
+    margin-left: 10%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.video video{
+    width: 70%;
+}
+
+.item {
+    margin: 10px;
+}
+
+.item video {
+    max-width: 50%;
+    height: 80%;
+    padding-top: 8%;
+    display: block;
+    margin: 0 auto;
+}
+
+.videoo{
+    width: 30%;
+}
+
+footer {
+    display:block;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+
+footer ul{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 0;
+    
+    
+}
+ 
+footer ul li {
+    list-style-type: none;
+    padding: 20px;
+}
+footer ul li a{
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    header{
+        width: 95%;
+        padding:1% ;
+        border: 5px solid #ffd977;
+       
+    }
+    header h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul {
+        display: none; /* Fsheh menun e zakonshme ne ekranet e vogla */
+    }
+    nav{
+        position: relative;
+    }
+    .gallery img{
+        width: 100%;
+    }
+    .hamburger {
+        display: block; /* Shfaq hamburger menu */
+        padding-bottom: 5%;
+    }
+
+    
+
+    #menu {
+        width: 100%;
+        position: absolute; /* Pozicionim absolut për t'u vendosur poshtë */
+        top: 100%; /* Vendos poshtë hamburgerit */
+        left: 0; /* Rreshto në të majtë */
+        background-color: #222; /* Ngjyra e sfondit të menusë */
+        border: 1px solid #ccc; /* Kufijtë për menunë */
+        z-index: 1; /* Sigurohu që menuja jetë sipër gjithçkaje tjetër */
+    }
+
+    
+   
+    #menu li{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .visible {
+        display: block; /* Shfaq menunë */
+    }
+
+    .hidden {
+        display: none; /* Fsheh menunë */
+    }
+    #menu ul li:hover {
+        background-color: #454545; /* Ngjyra e sfondit kur kalon mbi */
+    }
+    
+    
+    
+    #menu ul {
+        display: flex; /* Aktivizo flexbox */
+        flex-direction: column ; /* Rregullo në drejtim vertikal */
+    }
+    
+    
+    #menu ul li {
+        padding: 18px; /* Shto pak hapësirë për secilin artikull */
+    }
+    
+
+    
+    .gallery p{
+        width: 100%;
+        margin: 0;
+        padding-top:5%;
+    }
+
+    .text{
+        width: 100%;
+        margin: 0;
+        font-size: 16px;
+    }
+    .videoo{
+        width: 94%;
+        margin-top: 4%;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr ;
+        justify-content: st;
+        flex-direction: column; /* Rregullo fotot ne kolona ne ekranet e vogla */
+    }
+
+    .gallery .item{
+        text-align: start;
+    }
+    .video video{
+        width: 100%;
+        height: auto;
+        padding-top: 4%;
+    }
+    .item video {
+        max-width: 100%;
+        height: auto;
+        padding-top: 8%;
+        display: block;
+        margin: 0 auto;
+    }
+   
+  
+   
+    #menu{
+        font-weight: bold;
+        color: var(--green);
+    }
+    
+    footer .newsletter{
+        width:420px ;
+    }
+    footer iframe{
+        width: 100%;
+        height: 290px;
+        
+    }
+    footer .newsletter input{
+        width: 70%;
+        border: 1px solid rgb(195, 240, 199);
+        border-radius: 3px;
+        margin-top: 10px;
+        padding: 10px 12px;
+        font-size: 16px;
+    }
+    footer .newsletter form{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px 0px;
+    }
+    footer .newsletter h3{
+        line-height: 36px;
+        font-size: 24px;
+        font-family: var(--title-font);
+        margin:20px 0 10px 0;
+    }
+    footer .newsletter button{
+        width: 30%;
+        margin-top: 10px;
+        padding: 10px 21px;
+        color: white;
+        margin-left: 5px;
+        border-radius:3px ;
+        margin-right:100px;
+        border: 0px;
+        text-transform: uppercase;
+        font-size: 14px;
+        background-color: var(--green);
+        transition: all 0.3s;
+    }
+    footer .newsletter button:hover{
+        background-color: #004d4d;
+    }
+    footer .social-media ul  {
+        width: 100%;
+        display: flex;
+        padding: 0;
+    }
+    footer .social-media ul li span{
+        display: flex;
+        flex-direction: column;
+    }
+    footer .container1{
+        width: 100%;
+    }
+
+    footer ul {
+        padding: 0 !important;
+    }
+    
+    footer .social-media ul li span{
+        line-height: 30px;
+    }
+    footer .social-media ul li a{
+        color: white;
+        background-color: var(--brown);
+        display: inline-block;
+        width: 34px;
+        border-radius: 50%;
+        height: 34px;
+        text-align: center;
+        line-height: 34px;
+        transition: all 0.3s;
+    
+    
+    }
+    footer .social-media ul li a:hover{
+        background-color: var(--green);
+        cursor:pointer;
+    }
+    footer .social-media ul li a i {
+        color: white;
+    }
+    footer .menu li {
+        line-height: 36px;
+        font-weight: bold;
+    }
+    
+    footer .menu li:hover {
+        text-decoration: underline;
+    }
+    footer .links-end li,
+    footer .links-center li{
+        line-height: 28px;
+        font-weight: bold;
+    }
+    footer .links-center{
+        justify-self: center;
+    }
+    footer .links-end{
+        justify-self:center;
+    }
+    footer .links-center li a:hover{
+        text-decoration: underline;
+    }
+    footer .links-end li a:hover{
+        text-decoration: underline;
+    }
+    
+    footer p{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #333;
+        color: white;
+    }
+    footer .rez{
+        text-align: start;
+    }
+    }
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+pjesa 2  */
+
